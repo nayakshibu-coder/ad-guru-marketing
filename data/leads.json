@@ -1,0 +1,39 @@
+[
+  {
+    "id": "ADG-261021-VJ04",
+    "fullName": "Amit Verma",
+    "businessName": "Verma Construction",
+    "contactNumber": "8917545134",
+    "businessLocation": "Buguda, Odisha",
+    "businessCategory": "Construction & Real Estate",
+    "interestedServices": [
+      "Meta Ads",
+      "Website Design"
+    ],
+    "adBudget": "₹25,000+",
+    "requirements": "Need residential booking leads",
+    "consent": true,
+    "submittedAt": "2026-10-21T09:27:00.406Z",
+    "whatsappDeliveryStatus": "DIRECT_WHATSAPP",
+    "whatsappDeliveryDetails": "Direct WhatsApp Lead Link generated for +918917545134. Ready for immediate dispatch."
+  },
+  {
+    "id": "ADG-261021-RSL0",
+    "fullName": "Prakash Mohanty",
+    "businessName": "Mohanty Eye Care & Clinic",
+    "contactNumber": "9876543210",
+    "businessLocation": "Buguda, Ganjam",
+    "businessCategory": "Healthcare & Clinic",
+    "interestedServices": [
+      "Google Ads",
+      "Lead Generation",
+      "Google Business Profile"
+    ],
+    "adBudget": "₹10,000–₹25,000",
+    "requirements": "Need more local patient appointments for cataract and laser consultations.",
+    "consent": true,
+    "submittedAt": "2026-10-21T09:05:20.116Z",
+    "whatsappDeliveryStatus": "NOT_CONFIGURED",
+    "whatsappDeliveryDetails": "WhatsApp Business Cloud API is not yet configured in environment variables (WHATSAPP_API_TOKEN / WHATSAPP_PHONE_NUMBER_ID). Lead has been safely preserved."
+  }
+]

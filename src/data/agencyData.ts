@@ -1,0 +1,412 @@
+import { ServiceItem, IndustryItem, PortfolioItem, PricingPlan, FAQItem } from '../types';
+
+export const AGENCY_INFO = {
+  brandName: 'AdGuru Digital Marketing Agency',
+  founder: 'Shibu Kumar Nayak',
+  primaryTagline: 'WE BUILD BRANDS. WE GROW BUSINESSES.',
+  hindiTagline: 'Digital Duniya Mein Aapki Pehchan!',
+  location: 'Buguda, Ganjam, Odisha, India',
+  phone: '+91 8917545134',
+  email: 'nayakshibu578@gmail.com',
+  established: '2024',
+  copyrightYear: '2026',
+};
+
+export const SERVICES_LIST: ServiceItem[] = [
+  {
+    id: 'meta-ads',
+    name: 'Meta Ads',
+    shortDesc: 'Facebook & Instagram campaigns engineered for high-intent lead generation and targeted customer acquisition.',
+    fullDesc: 'Custom audience targeting, creative ad copies, lead generation funnels, strategic retargeting, and rigorous campaign optimization to maximize reach.',
+    features: ['Custom Audience & Lookalike Targeting', 'Lead Generation & Direct Messenger Ads', 'Retargeting Stacks', 'A/B Creative & Copy Testing'],
+    icon: 'Share2',
+    badge: 'Popular',
+  },
+  {
+    id: 'google-ads',
+    name: 'Google Ads',
+    shortDesc: 'Search, Display, and Performance Max advertising that places your business in front of customers actively searching.',
+    fullDesc: 'Conversion-focused keyword bidding, intent-driven search ads, high-visibility display networks, and precise conversion tracking.',
+    features: ['High-Intent Search Campaigns', 'Display Network & Retargeting', 'Negative Keyword Architecture', 'Conversion & Call Tracking'],
+    icon: 'Search',
+    badge: 'High Intent',
+  },
+  {
+    id: 'instagram-marketing',
+    name: 'Instagram Marketing',
+    shortDesc: 'Content planning, viral reels concepts, promotional creatives, and organic engagement to build loyal followers.',
+    fullDesc: 'Strategic content calendar tailored to your industry, aesthetic feed curation, story sequences, and promotional push for sales.',
+    features: ['Reels Concept & Script Direction', 'Aesthetic Grid & Carousel Design', 'Story Strategy & Highlights', 'Community Engagement Plan'],
+    icon: 'Instagram',
+  },
+  {
+    id: 'youtube-advertising',
+    name: 'YouTube Advertising',
+    shortDesc: 'Engaging video ad campaigns, skippable and bumper ads with pinpoint demographic and interest targeting.',
+    fullDesc: 'Hook-oriented video ad structures, in-stream placement optimization, brand awareness campaigns, and continuous view-through analysis.',
+    features: ['In-Stream Skippable & Non-Skippable Ads', 'Channel & Topic Placement Targeting', 'Video Hook & Script Strategy', 'Audience Retention Tracking'],
+    icon: 'Youtube',
+  },
+  {
+    id: 'seo',
+    name: 'Search Engine Optimization',
+    shortDesc: 'Comprehensive keyword research, technical on-page fixes, and local Google search optimization.',
+    fullDesc: 'Long-term organic visibility on Google. We optimize your website structure, meta architecture, schema, speed, and local map rank.',
+    features: ['Local SEO & Map Pack Optimization', 'On-Page SEO & Content Tuning', 'Technical SEO & Page Speed Audit', 'Competitor Keyword Analysis'],
+    icon: 'TrendingUp',
+  },
+  {
+    id: 'social-media-management',
+    name: 'Social Media Management',
+    shortDesc: 'Consistent branded content, editorial calendars, publishing management, and audience interaction.',
+    fullDesc: 'Keep your social profiles active and credible. We craft branded graphics, write compelling captions, schedule posts, and maintain brand voice.',
+    features: ['Monthly Content Calendar', 'Branded Visual Assets & Graphics', 'Scheduled Multi-Platform Publishing', 'Review & Message Monitoring'],
+    icon: 'Users',
+  },
+  {
+    id: 'website-design',
+    name: 'Website Design',
+    shortDesc: 'Modern, ultra-fast business websites and conversion-focused landing pages engineered for lead capture.',
+    fullDesc: 'Mobile-first responsive design, modern UI/UX, fast loading speeds, seamless WhatsApp integration, and clear call-to-actions throughout.',
+    features: ['Mobile-First Responsive Layout', 'Direct WhatsApp & Lead Capture', 'Fast Page Load Speeds', 'Modern Brand Aesthetics'],
+    icon: 'Globe',
+    badge: 'Core Service',
+  },
+  {
+    id: 'lead-generation',
+    name: 'Lead Generation',
+    shortDesc: 'End-to-end customer acquisition funnels connecting paid traffic straight to lead forms and your WhatsApp inbox.',
+    fullDesc: 'We construct full funnel experiences: captivating ad hooks, high-converting offer pages, verified form capture, and immediate WhatsApp lead delivery.',
+    features: ['Custom Lead Capture Pages', 'Automated WhatsApp Notifications', 'Lead Qualification Filters', 'CRM & Spreadsheet Hand-off'],
+    icon: 'Target',
+    badge: 'Specialty',
+  },
+  {
+    id: 'branding-creative-design',
+    name: 'Branding & Creative Design',
+    shortDesc: 'Distinctive brand identity, advertising banners, social creative packages, and sales collateral.',
+    fullDesc: 'Stand out from competitors with cohesive brand guidelines, logo refinement, promotional banners, flyers, and digital marketing graphics.',
+    features: ['Logo & Brand Identity Direction', 'High-Converting Ad Creatives', 'Marketing Banners & Collateral', 'Social Media Design Kits'],
+    icon: 'Sparkles',
+  },
+  {
+    id: 'google-business-profile',
+    name: 'Google Business Profile',
+    shortDesc: 'Local business profile setup, verification assistance, geo-relevance optimization, and review management.',
+    fullDesc: 'Help local customers find and call your business on Google Maps. Complete profile optimization, category mapping, photos, and update posts.',
+    features: ['Profile Setup & Category Optimization', 'Local Geo-Tagging & Visuals', 'Service & Product Catalog Setup', 'Review Generation Strategy'],
+    icon: 'MapPin',
+  },
+];
+
+export const WHY_CHOOSE_US = [
+  {
+    title: 'Business-Focused Strategy',
+    description: 'We align marketing campaigns directly with your business revenue model, profit margins, and specific growth bottlenecks.',
+    icon: 'Compass',
+  },
+  {
+    title: 'Creative Campaign Development',
+    description: 'Original ad creatives, compelling regional messaging, and sharp visual identity that capture consumer attention instantly.',
+    icon: 'Palette',
+  },
+  {
+    title: 'Audience-Focused Advertising',
+    description: 'Pinpoint targeting based on demographics, purchase intent, and location so you do not waste ad spend on the wrong viewers.',
+    icon: 'Crosshair',
+  },
+  {
+    title: 'Transparent Communication',
+    description: 'Clear reporting, direct communication with your dedicated specialist, and honest assessments without confusing buzzwords.',
+    icon: 'MessageSquare',
+  },
+  {
+    title: 'Tracking and Reporting',
+    description: 'Accurate conversion attribution, lead source tracking, and regular performance reviews showing what is working.',
+    icon: 'BarChart3',
+  },
+  {
+    title: 'Continuous Campaign Optimization',
+    description: 'Active monitoring, negative keyword pruning, creative rotation, and budget reallocation to improve efficiency over time.',
+    icon: 'RefreshCw',
+  },
+];
+
+export const INDUSTRIES_LIST: IndustryItem[] = [
+  {
+    id: 'healthcare',
+    name: 'Healthcare & Clinics',
+    headline: 'Patient Enquiries & Local Medical Authority',
+    marketingApproach: 'Local Google search campaigns for treatments and doctor consultations, Google Business Profile ranking, and educational reels addressing patient concerns.',
+    keyBenefits: ['Direct appointment booking enquiries', 'Local map pack dominance for clinics', 'Trust-building doctor profiles'],
+    icon: 'Stethoscope',
+  },
+  {
+    id: 'construction',
+    name: 'Construction & Real Estate',
+    headline: 'High-Value Project Leads & Investor Inquiries',
+    marketingApproach: 'Targeted Meta and Google Ads highlighting property features, project walkthroughs, brochure download funnels, and geo-targeted campaigns for buyers.',
+    keyBenefits: ['Pre-qualified site visit requests', 'WhatsApp project brochure downloads', 'High-ticket investor targeting'],
+    icon: 'Building2',
+  },
+  {
+    id: 'retail',
+    name: 'Retail & Local Businesses',
+    headline: 'Footfall Growth & Local Neighborhood Dominance',
+    marketingApproach: 'Hyper-local radius advertising, seasonal festival promotions, store visit campaigns, and WhatsApp catalog integration for direct orders.',
+    keyBenefits: ['Hyper-local radius reach (3-10 km)', 'Event & discount flash promotions', 'Google Maps foot traffic boost'],
+    icon: 'ShoppingBag',
+  },
+  {
+    id: 'restaurants',
+    name: 'Restaurants & Hospitality',
+    headline: 'Table Reservations & Food Discovery',
+    marketingApproach: 'Mouth-watering short-form food videos, weekend dining promotions, Google Maps optimization, and direct WhatsApp table booking links.',
+    keyBenefits: ['High-impact food reels & stories', 'Weekend promotion campaigns', 'Direct WhatsApp table reservations'],
+    icon: 'UtensilsCrossed',
+  },
+  {
+    id: 'ecommerce',
+    name: 'E-Commerce Brands',
+    headline: 'Catalog Sales & Repeat Customer Orders',
+    marketingApproach: 'Dynamic product ads on Meta, high-intent Google Shopping campaigns, cart abandonment recovery sequences, and retargeting ads.',
+    keyBenefits: ['Targeted product catalog campaigns', 'Multi-touchpoint retargeting', 'Direct WhatsApp customer support funnels'],
+    icon: 'Layers',
+  },
+  {
+    id: 'education',
+    name: 'Education & Coaching',
+    headline: 'Student Admissions & Workshop Sign-ups',
+    marketingApproach: 'Webinar and demo class funnels, parent and student targeting, admission deadline push campaigns, and automated WhatsApp registration.',
+    keyBenefits: ['Course inquiry lead generation', 'Parent demographic targeting', 'Instant WhatsApp counselling chat'],
+    icon: 'GraduationCap',
+  },
+  {
+    id: 'professional-services',
+    name: 'Professional Services',
+    headline: 'Client Consultations & B2B Inquiries',
+    marketingApproach: 'Professional positioning on Google Search, case study landing pages, thought leadership content, and qualification-focused enquiry forms.',
+    keyBenefits: ['Pre-vetted consultation requests', 'Search intent capture on Google', 'Professional brand positioning'],
+    icon: 'Briefcase',
+  },
+];
+
+export const PORTFOLIO_LIST: PortfolioItem[] = [
+  {
+    id: 'sample-leadgen-1',
+    title: 'Local Service Lead Funnel Architecture',
+    category: 'Lead Generation',
+    industry: 'Home & Professional Services',
+    servicesDelivered: ['Meta Lead Ads', 'High-Converting Landing Page', 'WhatsApp API Notification'],
+    description: 'Demonstrative multi-step lead capture workflow capturing verified inquiries with automated instant WhatsApp alerts to the service business dispatch team.',
+    isDemo: true,
+    sampleHighlights: ['Custom qualification questions', 'Under 30-second WhatsApp lead delivery', 'Zero manual data entry'],
+    imageGradient: 'from-orange-600/30 via-navy-900 to-[#101522]',
+  },
+  {
+    id: 'sample-health-2',
+    title: 'Clinic Local Patient Awareness Campaign',
+    category: 'Healthcare',
+    industry: 'Healthcare & Specialty Clinics',
+    servicesDelivered: ['Google Search Ads', 'Google Business Profile', 'WhatsApp Appointment Funnel'],
+    description: 'Sample local healthcare strategy driving high-intent appointment requests for specialty treatments within a 15 km geographic radius.',
+    isDemo: true,
+    sampleHighlights: ['Doctor credentials showcase', 'One-tap WhatsApp booking button', 'Call extensions for direct calls'],
+    imageGradient: 'from-blue-600/30 via-indigo-950 to-[#101522]',
+  },
+  {
+    id: 'sample-realestate-3',
+    title: 'Real Estate Site Visit Acquisition Campaign',
+    category: 'Construction & Real Estate',
+    industry: 'Property & Construction',
+    servicesDelivered: ['Meta Video Ads', 'Project Brochure Landing Page', 'Direct WhatsApp Enquiry'],
+    description: 'Concept campaign setup displaying architectural renders, floor plans, and amenities with an automated WhatsApp brochure download trigger.',
+    isDemo: true,
+    sampleHighlights: ['Architectural video walk-through ads', 'Instant PDF brochure delivery', 'Location advantage highlights'],
+    imageGradient: 'from-amber-600/30 via-slate-900 to-[#101522]',
+  },
+  {
+    id: 'sample-ecom-4',
+    title: 'E-Commerce Direct-to-Consumer Growth Setup',
+    category: 'E-Commerce',
+    industry: 'Retail & Consumer Goods',
+    servicesDelivered: ['Meta Catalog Ads', 'Conversion Funnel Optimization', 'Retargeting Stacks'],
+    description: 'Illustrative e-commerce structure featuring dynamic product feeds, cold audience testing sets, and layered retargeting for cart drop-offs.',
+    isDemo: true,
+    sampleHighlights: ['Dynamic catalog carousels', 'Segmented retargeting windows', 'Mobile-first product pages'],
+    imageGradient: 'from-emerald-600/30 via-slate-950 to-[#101522]',
+  },
+  {
+    id: 'sample-branding-5',
+    title: 'Brand Identity & Social Content System',
+    category: 'Social Media & Branding',
+    industry: 'Hospitality & Lifestyle',
+    servicesDelivered: ['Visual Brand Guidelines', 'Reels Strategy', 'Social Creative Suite'],
+    description: 'Comprehensive brand toolkit including typography hierarchy, color palettes, 30-day reels concept script, and branded story templates.',
+    isDemo: true,
+    sampleHighlights: ['Custom visual brand book', 'Hook-first reel templates', 'Unified promotional grid'],
+    imageGradient: 'from-purple-600/30 via-slate-900 to-[#101522]',
+  },
+  {
+    id: 'sample-landing-6',
+    title: 'High-Conversion Landing Page & WhatsApp Capture',
+    category: 'Website Design',
+    industry: 'Consulting & Education',
+    servicesDelivered: ['Responsive UI/UX', 'Mobile-First Coding', 'WhatsApp Integration'],
+    description: 'Lightweight, rapid-loading landing page designed with clear value propositions, trust proof points, and persistent WhatsApp consultation triggers.',
+    isDemo: true,
+    sampleHighlights: ['Sub-second page load times', 'Frictionless mobile form', 'Double CTA architecture'],
+    imageGradient: 'from-rose-600/30 via-stone-900 to-[#101522]',
+  },
+];
+
+export const PROCESS_STEPS = [
+  {
+    step: '01',
+    title: 'DISCOVER',
+    subtitle: 'Business Understanding & Objectives',
+    description: "We dive deep into your business model, target audience, profit drivers, past marketing efforts, and specific revenue objectives to set a realistic baseline.",
+    deliverables: ['Target audience profiling', 'Competitor review', 'Primary goal definition'],
+  },
+  {
+    step: '02',
+    title: 'STRATEGIZE',
+    subtitle: 'Channel Selection & Funnel Plan',
+    description: 'We develop a tailored roadmap choosing the best advertising platforms (Meta, Google, SEO) and blueprint the customer journey from first click to enquiry.',
+    deliverables: ['Channel allocation', 'Offer & angle positioning', 'Campaign timeline'],
+  },
+  {
+    step: '03',
+    title: 'EXECUTE',
+    subtitle: 'Campaign Launch & Funnel Setup',
+    description: 'Our team crafts compelling ad creatives, writes persuasive copy, builds conversion landing pages, and connects WhatsApp lead notifications.',
+    deliverables: ['Ad creative production', 'Lead capture configuration', 'Tracking implementation'],
+  },
+  {
+    step: '04',
+    title: 'OPTIMIZE',
+    subtitle: 'Data Review & Performance Refinement',
+    description: 'We analyze campaign metrics, prune non-performing audiences, test fresh creative angles, and reallocate budget to the highest-performing assets.',
+    deliverables: ['Transparent reporting', 'Creative refresh rotation', 'Cost-per-lead optimization'],
+  },
+];
+
+export const PRICING_PLANS: PricingPlan[] = [
+  {
+    id: 'starter',
+    name: 'Starter Plan',
+    tagline: 'Ideal for local businesses establishing their digital footprint.',
+    idealFor: 'Local shops, clinics, single-location service businesses',
+    inclusions: [
+      'Digital presence consultation & review',
+      'Google Business Profile setup guidance',
+      'Basic social media strategy & content advice',
+      'Recommended campaign next steps & channel plan',
+      'WhatsApp direct inquiry funnel guidance',
+      'Monthly review & strategic check-in',
+    ],
+    ctaLabel: 'Get Package Details on WhatsApp',
+  },
+  {
+    id: 'growth',
+    name: 'Growth Plan',
+    tagline: 'Engineered for businesses ready to generate active customer enquiries.',
+    popular: true,
+    idealFor: 'Growing service companies, healthcare clinics, retail stores',
+    inclusions: [
+      'Meta or Google advertising campaign setup',
+      'Target audience profiling & competitor research',
+      'Custom ad creative development & copywriting',
+      'Lead generation form & WhatsApp routing',
+      'Weekly campaign monitoring & bid tuning',
+      'Monthly detailed performance & lead report',
+    ],
+    ctaLabel: 'Get Package Details on WhatsApp',
+  },
+  {
+    id: 'complete-growth',
+    name: 'Complete Growth Plan',
+    tagline: 'Full-spectrum multi-channel marketing & digital brand acceleration.',
+    idealFor: 'Established brands, multi-location businesses, high-ticket services',
+    inclusions: [
+      'Multi-channel strategy (Meta Ads + Google Ads + Local SEO)',
+      'High-converting landing page consultation & setup',
+      'Ongoing creative design, reels & promotional banners',
+      'Advanced WhatsApp Business automation setup',
+      'End-to-end conversion tracking & CRM integration',
+      'Dedicated marketing manager & priority WhatsApp support',
+    ],
+    ctaLabel: 'Get Package Details on WhatsApp',
+  },
+];
+
+export const FAQS_LIST: FAQItem[] = [
+  {
+    question: 'Which businesses can work with AdGuru?',
+    answer: 'AdGuru works with a wide spectrum of businesses including local retail shops, healthcare clinics and doctors, construction and real estate companies, restaurants, e-commerce stores, education and coaching institutes, and independent service providers looking to build a dependable online presence.',
+  },
+  {
+    question: 'Do you provide Facebook and Instagram advertising?',
+    answer: 'Yes! We specialize in Meta Ads (Facebook & Instagram). We handle audience targeting, creative banner development, ad copy creation, lead generation forms, retargeting campaigns, and continuous performance optimization.',
+  },
+  {
+    question: 'Can all website enquiries reach WhatsApp?',
+    answer: 'Yes. AdGuru is built with WhatsApp as the primary communication engine. Every service button, pricing package, and consultation link opens a prefilled WhatsApp chat with our team. Furthermore, our website enquiry form saves every lead into a secure database and can automatically notify the agency WhatsApp.',
+  },
+  {
+    question: 'Will WhatsApp notifications work when a visitor submits a form?',
+    answer: 'Yes! Every valid enquiry is instantly saved in our database with a unique Lead ID, and WhatsApp opens directly with the complete enquiry prefilled to +91 8917545134, ensuring prompt communication.',
+  },
+  {
+    question: 'Is WhatsApp Business API or Meta token required?',
+    answer: 'No! You do not need any Meta Developer API keys, WHATSAPP_API_TOKEN, or WHATSAPP_PHONE_NUMBER_ID. Our zero-token direct WhatsApp integration connects visitors directly to your WhatsApp without recurring fees, token expiration, or technical hurdles.',
+  },
+  {
+    question: 'Are advertising charges included in your service fees?',
+    answer: 'No. Advertising spend is paid directly to advertising platforms (like Meta Ads or Google Ads) through your own ad account. AdGuru charges a management and strategy service fee. This ensures 100% financial transparency with zero hidden markups on your media budget.',
+  },
+  {
+    question: 'Do you provide website design and SEO?',
+    answer: 'Yes! We build modern, mobile-first, ultra-fast websites engineered specifically for lead capture and conversion. We also optimize on-page SEO, technical site performance, and Google Business Profiles for strong local search visibility.',
+  },
+  {
+    question: 'How can I start working with AdGuru?',
+    answer: 'Getting started is simple! Click "Get Free Consultation" or "Chat on WhatsApp" anywhere on this website to connect directly with founder Shibu Kumar Nayak (+91 8917545134). We will discuss your business goals, evaluate your market, and recommend the right growth roadmap.',
+  },
+];
+
+export const SERVICE_OPTIONS = [
+  'Meta Ads',
+  'Google Ads',
+  'Instagram Ads',
+  'YouTube Ads',
+  'SEO',
+  'Social Media Management',
+  'Website Design',
+  'Landing Page Design',
+  'Lead Generation',
+  'Branding & Creative Design',
+  'Google Business Profile',
+  'Other',
+];
+
+export const BUDGET_OPTIONS = [
+  'Below ₹5,000',
+  '₹5,000–₹10,000',
+  '₹10,000–₹25,000',
+  '₹25,000+',
+  'Not Decided',
+];
+
+export const CATEGORY_OPTIONS = [
+  'Local Retail / Store',
+  'Healthcare & Clinic',
+  'Construction & Real Estate',
+  'Restaurant & Food Business',
+  'E-Commerce & D2C',
+  'Coaching & Education',
+  'Professional Services',
+  'Automobile & Garage',
+  'Salon & Beauty',
+  'Other Business',
+];
