@@ -22,6 +22,7 @@ import {
   AGENCY_INFO
 } from '../data/agencyData';
 import { getWhatsAppUrl, formatFullLeadMessage } from '../utils/whatsapp';
+import { saveLeadEnquiry } from '../utils/leadStorage';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface EnquiryFormSectionProps {
@@ -99,27 +100,17 @@ export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({ onLeadSu
 
     setLoading(true);
     try {
-      const response = await fetch('/api/leads', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          fullName,
-          businessName,
-          contactNumber,
-          businessLocation,
-          businessCategory,
-          interestedServices,
-          adBudget,
-          requirements,
-          consent: true,
-        }),
+      const data = await saveLeadEnquiry({
+        fullName: fullName.trim(),
+        businessName: businessName.trim(),
+        contactNumber: contactNumber.trim(),
+        businessLocation: businessLocation.trim(),
+        businessCategory: businessCategory.trim(),
+        interestedServices,
+        adBudget,
+        requirements: requirements.trim(),
+        consent: true,
       });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to submit enquiry.');
-      }
 
       setSubmittedLeadResult({
         leadId: data.leadId,
@@ -132,16 +123,9 @@ export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({ onLeadSu
       if (onLeadSubmitted) {
         onLeadSubmitted();
       }
-
-      // Automatically launch WhatsApp with the formatted lead
-      if (data.directWhatsAppUrl) {
-        window.open(data.directWhatsAppUrl, '_blank');
-      }
     } catch (err: unknown) {
       const errorString = err instanceof Error ? err.message : String(err);
-      setValidationError(errorString || 'Could not connect to the server. Launching WhatsApp directly...');
-      // Fallback: open WhatsApp directly with entered details
-      handleDirectWhatsAppClick();
+      setValidationError(errorString || 'Please check your details and try again.');
     } finally {
       setLoading(false);
     }
@@ -473,7 +457,7 @@ export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({ onLeadSu
                 </div>
 
                 <p className="text-xs text-[#A7ADBA] leading-relaxed">
-                  Your enquiry is safely saved. WhatsApp will open with your prefilled details directly sent to AdGuru (+91 8917545134). If it did not open automatically, click below.
+                  Your enquiry is safely saved. Click the button below to open WhatsApp with your prefilled details directly for AdGuru (+91 8917545134).
                 </p>
               </div>
 

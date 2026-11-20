@@ -20,6 +20,7 @@ import { Footer } from './components/Footer';
 import { WhatsAppFloatingButton } from './components/WhatsAppFloatingButton';
 import { AdminLeadsDrawer } from './components/AdminLeadsDrawer';
 import { PrivacyPolicyModal, TermsModal } from './components/LegalModals';
+import { fetchAllLeads } from './utils/leadStorage';
 
 export default function App() {
   const [isAdminOpen, setIsAdminOpen] = useState(false);
@@ -28,17 +29,8 @@ export default function App() {
   const [leadCount, setLeadCount] = useState<number>(0);
 
   const fetchLeadCount = async () => {
-    try {
-      const res = await fetch('/api/leads');
-      if (res.ok) {
-        const data = await res.json();
-        if (typeof data.count === 'number') {
-          setLeadCount(data.count);
-        }
-      }
-    } catch {
-      // Ignore initial offline/static render
-    }
+    const leads = await fetchAllLeads();
+    setLeadCount(leads.length);
   };
 
   useEffect(() => {

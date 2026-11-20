@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { LeadRecord } from '../types';
 import { formatFullLeadMessage, getWhatsAppUrl, AGENCY_PHONE_DISPLAY } from '../utils/whatsapp';
+import { fetchAllLeads } from '../utils/leadStorage';
 import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface AdminLeadsDrawerProps {
@@ -38,11 +39,8 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
   const fetchLeads = async () => {
     setLoading(true);
     try {
-      const res = await fetch('/api/leads');
-      const data = await res.json();
-      if (data.leads) {
-        setLeads(data.leads);
-      }
+      const data = await fetchAllLeads();
+      setLeads(data);
     } catch (err) {
       console.error('Error fetching leads:', err);
     } finally {
