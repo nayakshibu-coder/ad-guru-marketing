@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
   FolderKanban,
   ExternalLink,
-  MessageCircle,
   Sparkles,
   Layers,
   CheckCircle,
@@ -11,6 +10,7 @@ import {
 } from 'lucide-react';
 import { PORTFOLIO_LIST } from '../data/agencyData';
 import { getWhatsAppUrl, getPortfolioEnquiryMessage } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const PortfolioSection: React.FC = () => {
   const [filter, setFilter] = useState<string>('All');
@@ -140,7 +140,7 @@ export const PortfolioSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-full py-2.5 px-3 rounded-xl border border-[#1F2942] group-hover:border-[#25D366]/60 bg-[#101522] group-hover:bg-[#25D366]/10 text-white group-hover:text-[#25D366] text-xs font-bold transition-all flex items-center justify-center gap-2"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-[#25D366] fill-[#25D366]/20" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
                   <span>Discuss Similar Project on WhatsApp</span>
                 </a>
               </div>

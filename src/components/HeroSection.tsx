@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  MessageCircle,
   ArrowRight,
   Sparkles,
   TrendingUp,
@@ -14,6 +13,7 @@ import {
 } from 'lucide-react';
 import { AGENCY_INFO } from '../data/agencyData';
 import { getWhatsAppUrl, getHeroConsultationMessage, getHeroChatMessage } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const HeroSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'funnel' | 'channels' | 'leads'>('funnel');
@@ -79,7 +79,7 @@ export const HeroSection: React.FC = () => {
                 className="px-6 py-3.5 rounded-xl border border-[#25D366]/40 hover:border-[#25D366] bg-[#25D366]/10 hover:bg-[#25D366]/20 text-white font-semibold text-sm transition-all flex items-center justify-center gap-2.5 shadow-sm active:scale-95"
               >
                 <div className="w-5 h-5 rounded-full bg-[#25D366] flex items-center justify-center">
-                  <MessageCircle className="w-3.5 h-3.5 text-white fill-white" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
                 </div>
                 <span>CHAT WITH ADGURU ON WHATSAPP</span>
               </a>
@@ -285,7 +285,7 @@ export const HeroSection: React.FC = () => {
               <div className="mt-4 pt-3 border-t border-[#1F2942] flex items-center justify-between bg-gradient-to-r from-[#25D366]/10 to-transparent p-3 rounded-xl border-l-4 border-l-[#25D366]">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-[#25D366] flex items-center justify-center text-white font-bold">
-                    <MessageCircle className="w-4 h-4 fill-white" />
+                    <WhatsAppIcon className="w-4 h-4 text-white" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-white">100% Leads Routed To WhatsApp</div>

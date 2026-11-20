@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
 import { FAQS_LIST } from '../data/agencyData';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -78,7 +79,7 @@ export const FAQSection: React.FC = () => {
             rel="noopener noreferrer"
             className="px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold flex items-center gap-2 transition-all shrink-0"
           >
-            <MessageCircle className="w-3.5 h-3.5 fill-white" />
+            <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
             <span>Ask on WhatsApp</span>
           </a>
         </div>

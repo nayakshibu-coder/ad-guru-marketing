@@ -1,7 +1,8 @@
 import React from 'react';
-import { Check, MessageCircle, AlertCircle, Sparkles, ArrowRight } from 'lucide-react';
+import { Check, AlertCircle, Sparkles, ArrowRight } from 'lucide-react';
 import { PRICING_PLANS } from '../data/agencyData';
 import { getWhatsAppUrl, getPricingPackageMessage } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const PricingSection: React.FC = () => {
   return (
@@ -83,7 +84,7 @@ export const PricingSection: React.FC = () => {
                       : 'bg-[#171F38] hover:bg-[#25D366]/20 border border-[#1F2942] hover:border-[#25D366] text-white hover:text-[#25D366]'
                   }`}
                 >
-                  <MessageCircle className="w-4 h-4 text-[#25D366] fill-[#25D366]/30" />
+                  <WhatsAppIcon className={plan.popular ? 'w-4 h-4 text-white' : 'w-4 h-4 text-[#25D366]'} />
                   <span>{plan.ctaLabel}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>

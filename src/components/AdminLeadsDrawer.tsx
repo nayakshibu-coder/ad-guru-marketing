@@ -3,7 +3,6 @@ import {
   X,
   ShieldCheck,
   RefreshCw,
-  MessageCircle,
   Copy,
   Check,
   Download,
@@ -18,6 +17,7 @@ import {
 } from 'lucide-react';
 import { LeadRecord } from '../types';
 import { formatFullLeadMessage, getWhatsAppUrl, AGENCY_PHONE_DISPLAY } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface AdminLeadsDrawerProps {
   isOpen: boolean;
@@ -100,7 +100,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
         <div className="p-5 border-b border-[#1F2942] flex items-center justify-between bg-[#101522]">
           <div className="flex items-center gap-2.5">
             <div className="w-9 h-9 rounded-xl bg-[#25D366]/20 text-[#25D366] flex items-center justify-center font-bold">
-              <MessageCircle className="w-5 h-5 fill-[#25D366]" />
+              <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
             </div>
             <div>
               <h2 className="text-base font-bold text-white">Agency Leads Hub</h2>
@@ -283,7 +283,7 @@ export const AdminLeadsDrawer: React.FC<AdminLeadsDrawerProps> = ({
                             rel="noopener noreferrer"
                             className="flex-1 py-2 px-3 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold flex items-center justify-center gap-1.5 transition-all cursor-pointer"
                           >
-                            <MessageCircle className="w-3.5 h-3.5 fill-white" />
+                            <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
                             <span>Chat on WhatsApp</span>
                           </a>
 

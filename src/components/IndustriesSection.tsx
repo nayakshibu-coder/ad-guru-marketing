@@ -7,12 +7,12 @@ import {
   Layers,
   GraduationCap,
   Briefcase,
-  MessageCircle,
   ArrowRight,
   CheckCircle2
 } from 'lucide-react';
 import { INDUSTRIES_LIST } from '../data/agencyData';
 import { getWhatsAppUrl, getIndustryEnquiryMessage } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const IndustriesSection: React.FC = () => {
   const getIndustryIcon = (iconName: string) => {
@@ -105,7 +105,7 @@ export const IndustriesSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-full py-2.5 px-3 rounded-xl border border-[#1F2942] group-hover:border-[#25D366]/60 bg-[#171F38] group-hover:bg-[#25D366]/10 text-white group-hover:text-[#25D366] text-xs font-bold transition-all flex items-center justify-center gap-2"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-[#25D366] fill-[#25D366]/20" />
+                  <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
                   <span>Enquire on WhatsApp</span>
                   <ArrowRight className="w-3 h-3" />
                 </a>

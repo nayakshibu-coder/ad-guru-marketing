@@ -1,7 +1,8 @@
 import React from 'react';
-import { MapPin, Phone, Mail, MessageCircle, Send, Clock, UserCheck } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, Clock, UserCheck } from 'lucide-react';
 import { AGENCY_INFO } from '../data/agencyData';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const ContactSection: React.FC = () => {
   const scrollToForm = () => {
@@ -57,7 +58,7 @@ export const ContactSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex-1 py-2 px-3 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-xs text-white font-bold text-center flex items-center justify-center gap-1.5 transition-all"
               >
-                <MessageCircle className="w-3.5 h-3.5 fill-white" />
+                <WhatsAppIcon className="w-3.5 h-3.5 text-white" />
                 <span>WhatsApp</span>
               </a>
             </div>

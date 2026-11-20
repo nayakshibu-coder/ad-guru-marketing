@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   Send,
-  MessageCircle,
   CheckCircle2,
   AlertTriangle,
   Loader2,
@@ -23,6 +22,7 @@ import {
   AGENCY_INFO
 } from '../data/agencyData';
 import { getWhatsAppUrl, formatFullLeadMessage } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface EnquiryFormSectionProps {
   onLeadSubmitted?: () => void;
@@ -431,7 +431,7 @@ export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({ onLeadSu
                   </>
                 ) : (
                   <>
-                    <MessageCircle className="w-5 h-5 fill-white" />
+                    <WhatsAppIcon className="w-5 h-5 text-white" />
                     <span>CONTINUE ON WHATSAPP</span>
                   </>
                 )}
@@ -485,7 +485,7 @@ export const EnquiryFormSection: React.FC<EnquiryFormSectionProps> = ({ onLeadSu
                   rel="noopener noreferrer"
                   className="w-full py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/20 transition-all cursor-pointer"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
                   <span>Deliver Lead to AdGuru WhatsApp</span>
                 </a>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  MessageCircle,
   MapPin,
   Phone,
   Mail,
@@ -13,6 +12,7 @@ import {
 } from 'lucide-react';
 import { AGENCY_INFO, SERVICES_LIST } from '../data/agencyData';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface FooterProps {
   onOpenPrivacy: () => void;
@@ -175,7 +175,7 @@ export const Footer: React.FC<FooterProps> = ({
                 rel="noopener noreferrer"
                 className="w-full py-2 px-3 rounded-lg bg-[#25D366]/20 border border-[#25D366]/50 hover:bg-[#25D366] text-[#25D366] hover:text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-all"
               >
-                <MessageCircle className="w-3.5 h-3.5 fill-current" />
+                <WhatsAppIcon className="w-3.5 h-3.5" />
                 <span>Quick WhatsApp Chat</span>
               </a>
             </div>

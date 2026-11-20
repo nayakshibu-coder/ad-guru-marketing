@@ -10,12 +10,12 @@ import {
   Target,
   Sparkles,
   MapPin,
-  MessageCircle,
   ArrowRight,
   Check
 } from 'lucide-react';
 import { SERVICES_LIST } from '../data/agencyData';
 import { getWhatsAppUrl, getServiceEnquiryMessage } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const ServicesSection: React.FC = () => {
   // Mapping of string icon names to Lucide icon components
@@ -117,7 +117,7 @@ export const ServicesSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-full py-2.5 px-4 rounded-xl border border-[#1F2942] group-hover:border-[#25D366]/60 bg-[#171F38] group-hover:bg-[#25D366]/10 text-white group-hover:text-[#25D366] text-xs font-bold transition-all flex items-center justify-center gap-2 active:scale-95"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#25D366] fill-[#25D366]/20" />
+                  <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
                   <span>Get Details on WhatsApp</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </a>
@@ -140,7 +140,7 @@ export const ServicesSection: React.FC = () => {
             rel="noopener noreferrer"
             className="px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs tracking-wider uppercase transition-all shadow-md shadow-[#25D366]/20 flex items-center gap-2 shrink-0"
           >
-            <MessageCircle className="w-4 h-4 fill-white" />
+            <WhatsAppIcon className="w-4 h-4 text-white" />
             <span>Discuss Custom Plan on WhatsApp</span>
           </a>
         </div>

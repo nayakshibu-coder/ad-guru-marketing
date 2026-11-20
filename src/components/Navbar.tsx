@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { MessageCircle, Menu, X, ShieldCheck, ArrowRight, Phone } from 'lucide-react';
+import { Menu, X, ShieldCheck, Phone } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppIcon';
 import { AGENCY_INFO } from '../data/agencyData';
 import { getWhatsAppUrl, getHeroConsultationMessage } from '../utils/whatsapp';
 
@@ -108,7 +109,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAdmin, leadCount = 0 }) =>
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#25D366] to-[#20ba59] hover:from-[#20ba59] hover:to-[#25D366] text-white text-xs font-bold tracking-wide uppercase shadow-md shadow-[#25D366]/25 hover:shadow-[#25D366]/40 flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 fill-white" />
+              <WhatsAppIcon className="w-4 h-4 text-white" />
               <span>WhatsApp Us</span>
             </a>
           </div>
@@ -164,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenAdmin, leadCount = 0 }) =>
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-3 rounded-lg bg-[#25D366] hover:bg-[#20ba59] text-white text-sm font-bold flex items-center justify-center gap-2 shadow-md shadow-[#25D366]/20"
               >
-                <MessageCircle className="w-4 h-4 fill-white" />
+                <WhatsAppIcon className="w-4 h-4 text-white" />
                 <span>Chat on WhatsApp (+91 8917545134)</span>
               </a>
             </div>

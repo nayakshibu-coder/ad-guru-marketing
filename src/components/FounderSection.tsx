@@ -1,7 +1,8 @@
 import React from 'react';
-import { MessageCircle, Award, CheckCircle, MapPin, Mail, Phone, ArrowRight } from 'lucide-react';
+import { Award, CheckCircle, MapPin, Mail, Phone, ArrowRight } from 'lucide-react';
 import { AGENCY_INFO } from '../data/agencyData';
 import { getWhatsAppUrl } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const FounderSection: React.FC = () => {
   return (
@@ -98,7 +99,7 @@ export const FounderSection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#FF6B2C] to-[#FF8945] hover:from-[#FF7A40] hover:to-[#FF6B2C] text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-[#FF6B2C]/25 transition-all"
                 >
-                  <MessageCircle className="w-4 h-4 fill-white" />
+                  <WhatsAppIcon className="w-4 h-4 text-white" />
                   <span>Discuss Your Business Goals</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
